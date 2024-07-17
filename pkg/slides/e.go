@@ -19,7 +19,7 @@ func E() {
 	}
 }
 
-func requestReply() (chan int, <-chan int) { // not the different syntax for the return types
+func requestReply() (chan<- int, <-chan int) { // not the different syntax for the return types
 	request := make(chan int)
 	reply := make(chan int)
 	go func() {
